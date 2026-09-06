@@ -55,7 +55,7 @@ export default defineConfig({
     plugins: [
         cloudflareTest({
             miniflare: {
-                compatibilityDate: '2025-06-17',
+                compatibilityDate: '2026-08-22',
                 compatibilityFlags: ['nodejs_compat'],
                 kvNamespaces: ['CACHE'],
             },
@@ -69,6 +69,6 @@ export default defineConfig({
         },
     },
     test: {
-        include: ['lib/**/*.worker.test.ts'],
+        include: ['lib/**/*.worker.test.ts', 'tests/**/*.worker.test.ts', 'lib/utils/parse-script-data.test.ts'],
     },
 });
